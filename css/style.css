@@ -15,3 +15,9 @@ body{
     height: 100vh; /* Take full browser height */
     color: black;
 }
+
+#time{
+
+    font-size: 8rem;
+
+}
