@@ -7,5 +7,11 @@
 body{
 
     font-family: 'Quicksand', sans-serif;
-    
+    display: flex; /* Align items */
+    flex-direction: column; /* Vertical direction */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Take full browser height */
+    color: black;
 }
