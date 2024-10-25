@@ -8,7 +8,9 @@ const time = document.getElementById('time'),
 function showTime(){
 
     // Get current time 24-hour format
-    let today = new Date(),
+    // Night time
+    let today = new Date(2024, 10, 25, 20, 33, 30),
+    // let today = new Date(),
         hour = today.getHours(),
         min = today.getMinutes(),
         sec = today.getSeconds();
@@ -58,7 +60,9 @@ function addZero(n){
 // Set Background Image and Greeting
 function setBgGreet(){
 
-    let today = new Date(),
+    // Night time
+    let today = new Date(2024, 10, 25, 20, 33, 30),
+    //let today = new Date(),
         hour = today.getHours();
 
     // Check time of the day
