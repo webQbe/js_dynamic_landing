@@ -81,6 +81,9 @@ function setBgGreet(){
         // Set Greeting
         greeting.textContent = 'Good Afternoon!';
 
+        // Change Font Color
+        document.body.style.color = 'black';
+
     } else {
 
         // Evening
