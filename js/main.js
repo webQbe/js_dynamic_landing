@@ -83,6 +83,7 @@ function setBgGreet(){
 
         // Change Font Color
         document.body.style.color = 'black';
+       
 
     } else {
 
@@ -116,6 +117,24 @@ function getName(){
 }
 
 
+// Get Answer from Local Storage
+function getAnswer(){
+
+    // Check if answer is stored
+    if(localStorage.getItem('answer') === null){
+
+        // If answer not found
+        answer.textContent = '[Enter Focus]';
+
+    } else {
+
+        // If answer found, display answer
+        answer.textContent = localStorage.getItem('answer');
+
+    }
+
+}
+
 
 // Run Clock
 showTime();
@@ -126,3 +145,5 @@ setBgGreet();
 // Get Name from Local Storage
 getName();
 
+// Get Answer from Local Storage
+getAnswer();
