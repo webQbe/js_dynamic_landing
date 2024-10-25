@@ -32,11 +32,27 @@ function showTime(){
         */
 
     // Output Time
-    time.innerHTML = `${hour}<span>:</span>${min}<span>:</span>${sec}`;
+    time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)}`;
 
     // Update time every sec
     setTimeout(showTime, 1000);
 
+}
+
+
+// Add Zeros
+function addZero(n){
+
+    // If number 'n' is less than 10, add a 0
+    return (parseInt(n, 10) < 10 ? '0' : '') + n ;
+
+    /* 
+
+       parseInt() is a function that converts the string n into an integer.
+
+       The second argument, 10, specifies the base (decimal) in which to interpret n.
+       
+    */
 }
 
 // Run Clock
