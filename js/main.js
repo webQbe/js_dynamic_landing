@@ -4,6 +4,10 @@ const time = document.getElementById('time'),
     name = document.getElementById('name'),
     answer = document.getElementById('focus');
 
+
+// Options
+const showAmPm = true;
+
 // Show Time
 function showTime(){
 
@@ -34,7 +38,7 @@ function showTime(){
         */
 
     // Output Time
-    time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)}`;
+    time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)} ${showAmPm ? amPm : ''}`;
 
     // Update time every sec
     setTimeout(showTime, 1000);
