@@ -96,3 +96,6 @@ function setBgGreet(){
 
 // Run Clock
 showTime();
+
+// Run Background & Greeting
+setBgGreet();
