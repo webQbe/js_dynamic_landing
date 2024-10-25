@@ -2,7 +2,7 @@
 const time = document.getElementById('time'),
     greeting = document.getElementById('greeting'),
     name = document.getElementById('name'),
-    focus = document.getElementById('focus');
+    answer = document.getElementById('focus');
 
 // Show Time
 function showTime(){
@@ -97,8 +97,32 @@ function setBgGreet(){
 
 }
 
+// Get Name from Local Storage
+function getName(){
+
+    // Check if name is stored
+    if(localStorage.getItem('name') === null){
+
+        // If name not found
+        name.textContent = '[Enter Name]';
+
+    } else {
+
+        // If name found, display name
+        name.textContent = localStorage.getItem('name');
+
+    }
+
+}
+
+
+
 // Run Clock
 showTime();
 
 // Run Background & Greeting
 setBgGreet();
+
+// Get Name from Local Storage
+getName();
+
