@@ -137,9 +137,12 @@ function getAnswer(){
 
 
 // Listen for name element
-
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
+
+// Listen for answer element
+answer.addEventListener('keypress', setAnswer);
+answer.addEventListener('blur', setAnswer);
 
 // Save Name to Local Storage
 function setName(e){
@@ -166,6 +169,32 @@ function setName(e){
 
 }
 
+
+// Save Answer to Local Storage
+function setAnswer(e){
+
+
+    // Check if event is keypress
+    if(e.type === 'keypress'){
+
+        // Check if pressed key is Enter (13)
+        if(e.which == 13 || e.keyCode == 13){
+
+            // Save text from answer
+            localStorage.setItem('answer', e.target.innerText);
+
+            answer.blur(); // prevent cursor moving to new line
+        }
+
+    } else {
+     
+        // On blur event
+        localStorage.setItem('answer', e.target.innerText);
+
+    }
+
+
+}
 
 // Run Clock
 showTime();
