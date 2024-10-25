@@ -12,9 +12,11 @@ const showAmPm = true;
 function showTime(){
 
     // Get current time 24-hour format
+
     // Night time
-    let today = new Date(2024, 10, 25, 20, 33, 30),
-    // let today = new Date(),
+    // let today = new Date(2024, 10, 25, 20, 33, 30),
+
+    let today = new Date(),
         hour = today.getHours(),
         min = today.getMinutes(),
         sec = today.getSeconds();
@@ -65,8 +67,9 @@ function addZero(n){
 function setBgGreet(){
 
     // Night time
-    let today = new Date(2024, 10, 25, 20, 33, 30),
-    //let today = new Date(),
+    // let today = new Date(2024, 10, 25, 20, 33, 30),
+
+    let today = new Date(),
         hour = today.getHours();
 
     // Check time of the day
@@ -91,6 +94,9 @@ function setBgGreet(){
 
         // Change Font Color
         document.body.style.color = 'black';
+
+        // Change Text Outline
+        document.body.style.textShadow = '-1px -1px 0 white, 1px -1px 0 white, -1px  1px 0 white, 1px  1px 0 white';  
        
 
     } else {
