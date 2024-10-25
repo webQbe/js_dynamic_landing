@@ -55,5 +55,44 @@ function addZero(n){
     */
 }
 
+// Set Background Image and Greeting
+function setBgGreet(){
+
+    let today = new Date(),
+        hour = today.getHours();
+
+    // Check time of the day
+    if(hour < 12){
+
+        // Morning
+        // Set Background Image
+        document.body.style.backgroundImage = "url('../img/morning.jpg')";
+
+        // Set Greeting
+        greeting.textContent = 'Good morning!';
+
+
+    } else if(hour < 18) {
+
+        // Afternoon
+        // Set Background Image
+        document.body.style.backgroundImage = "url('../img/afternoon.jpg')";
+
+        // Set Greeting
+        greeting.textContent = 'Good afternoon!';
+
+    } else {
+
+        // Evening
+        // Set Background Image
+        document.body.style.backgroundImage = "url('../img/night.jpg')";
+
+        // Set Greeting
+        greeting.textContent = 'Good night!';
+            
+    }    
+
+}
+
 // Run Clock
 showTime();
