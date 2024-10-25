@@ -136,6 +136,37 @@ function getAnswer(){
 }
 
 
+// Listen for name element
+
+name.addEventListener('keypress', setName);
+name.addEventListener('blur', setName);
+
+// Save Name to Local Storage
+function setName(e){
+
+    // Check if event is keypress
+    if(e.type === 'keypress'){
+
+        // Check if pressed key is Enter (13)
+        if(e.which == 13 || e.keyCode == 13){
+
+            // Save text from name
+            localStorage.setItem('name', e.target.innerText);
+
+            name.blur(); // prevent cursor moving to new line
+        }
+
+    } else {
+     
+        // On blur event
+        localStorage.setItem('name', e.target.innerText);
+
+    }
+    
+
+}
+
+
 // Run Clock
 showTime();
 
